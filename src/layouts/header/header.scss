@@ -1,0 +1,30 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0E1423;
+    color: white;
+    height: 60px;
+
+    .hLeft {
+        display: flex;
+
+        div {
+            margin: 0px 10px;
+            font-size: 19px;
+        }
+    }
+
+    .hRight {
+        display: flex;
+
+        div {
+            margin: 0px 10px;
+            a {
+                text-decoration: none;
+                color: white;
+                font-size: 22px;
+            }
+        }
+    }
+}
