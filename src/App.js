@@ -1,21 +1,31 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Main from './pages/menu/Main';
+import Main from './pages/home/Home';
 import ProjectsPage from './pages/projects/ProjectsPage';
-import { Home, Projects} from './components/routes'
+import { ABOUT_PAGE, CONTACT_PAGE, HOME_PAGE, PROJECTS_PAGE, RESUME_PAGE} from './components/routes'
 import Header from './layouts/header/Header';
+import Footer from './layouts/footer/Footer';
+import AboutPage from './pages/about/AboutPage';
+import ContactPage from './pages/contact/ContactPage';
+import ResumePage from './pages/resume/ResumePage';
 
 function App() {
   return (
-    <div>
       <Router>
         <Header />
-        <Routes>
-          <Route exact path={Home} element={<Main/>} />
-          <Route path={Projects} element={<ProjectsPage/>} />
-        </Routes>
+          <div className='mainCont'>
+            <div className="container">
+              <Routes>
+              <Route exact path={HOME_PAGE} element={<Main/>} />
+              <Route path={ABOUT_PAGE} element={<AboutPage />} />
+              <Route path={PROJECTS_PAGE} element={<ProjectsPage/>} />
+              <Route path={RESUME_PAGE} element={<ResumePage />} />
+              <Route path={CONTACT_PAGE} element={<ContactPage />} />
+              </Routes>
+               <Footer />
+            </div>
+          </div>
       </Router>
-    </div>
   );
 }
 

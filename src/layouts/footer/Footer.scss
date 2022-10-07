@@ -1,0 +1,30 @@
+
+@media screen and (max-width: 12000px) {
+    .footer {
+        padding: 20px 0;
+
+        .socialCont {
+            display: flex;
+            gap: 30px;
+
+            a {
+                color: black;
+                font-size: 20px;
+
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 999px) {
+    .socialCont {
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        bottom: 0px;
+        right: 0px;
+        width: 100%;
+
+    }
+}

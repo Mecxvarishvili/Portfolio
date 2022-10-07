@@ -1,31 +1,23 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faTwitter, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'react-router-dom';
+import { ABOUT_PAGE, CONTACT_PAGE, HOME_PAGE, PROJECTS_PAGE, RESUME_PAGE } from '../../components/routes';
+import RouteGetter from './RouteGetter';
 
 const Header = () => {
+    console.log(window.location)
     return (
         <div className="header" >
-            <div className="hLeft" >
-                <div>Home</div>
-                <div>Projects</div>
-                <div>About</div>
-                <div>Contact</div>
-            </div>
-            <div className="hRight">
-                <div>
-                    <a href="https://github.com/Mecxvarishvili" target="_blank"> 
-                        <FontAwesomeIcon icon={faGithub} />
-                    </a>
-                </div>
-                <div>
-                    <a href="https://www.linkedin.com/in/vazha-metskhvarishvili-6b98a921a/" target="_blank">  
-                        <FontAwesomeIcon icon={faLinkedinIn} />
-                    </a>
-                </div>
-                <div>
-                    <a href="https://www.facebook.com/vazha.metskhvarishvili" target="_blank" >
-                        <FontAwesomeIcon icon={faFacebookF} />
-                    </a>
+            <div className="container" >
+                <Link className="logo" to={HOME_PAGE}>logo</Link>
+                <button className="burgerMenu" >bar</button>
+                <div className="routesCont" >
+                    <ul>
+                        <RouteGetter href={ABOUT_PAGE} />
+                        <RouteGetter href={PROJECTS_PAGE} />
+                        <RouteGetter href={RESUME_PAGE} />
+                        <RouteGetter href={CONTACT_PAGE} />
+                        <li>daynight</li>
+                    </ul>
                 </div>
             </div>
         </div>

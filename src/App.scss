@@ -1,2 +1,28 @@
-@import './pages/menu/main.scss';
-@import './layouts/header/header.scss'
+@import './pages/home/Home.scss';
+@import './layouts/header/Header.scss';
+@import "./layouts/footer/Footer.scss";
+
+
+@media screen and (max-width: 120000px) {
+    .mainCont {
+        max-width: 1140px;
+        margin: 0 auto;
+        margin-top: 30px;
+
+        .container {
+            width: 940px;
+            margin: 0 auto;
+
+
+        }
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 676px) {
+
+}

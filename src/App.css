@@ -1,28 +1,132 @@
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #0E1423;
-  color: white;
-  height: 60px;
+@media screen and (max-width: 120000px) {
+  .homePage .name {
+    font-size: 60px;
+    font-weight: 800;
+    text-transform: capitalize;
+  }
 }
-.header .hLeft {
-  display: flex;
+@media screen and (max-width: 120000px) {
+  .header {
+    padding: 50px 0;
+  }
+  .header .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .header .container .burgerMenu {
+    display: none;
+  }
+  .header .container .routesCont ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    /* 
+    a::after {
+        content: '';
+        display: block;
+        margin: auto;
+        height: 1px;
+        width: 0px;
+        left: 51%;
+        right: 51%;
+        background: transparent;
+        transition: width .5s ease, background-color .5s ease;
+    }
+    a:hover:after {
+      width: 100%;
+      background: black;
+    } */
+  }
+  .header .container .routesCont ul a {
+    text-decoration: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    text-transform: capitalize;
+    display: block;
+  }
+  .header .container .routesCont ul .liBottomHover::after {
+    content: "";
+    display: block;
+    margin: auto;
+    left: 51%;
+    right: 51%;
+    height: 1px;
+    width: 0px;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+  }
+  .header .container .routesCont ul .liBottomHover:hover:after {
+    background: black;
+    width: 100%;
+  }
 }
-.header .hLeft div {
-  margin: 0px 10px;
-  font-size: 19px;
+@media screen and (max-width: 999px) {
+  .header .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .header .container .burgerMenu {
+    display: block;
+  }
+  .header .container .routesCont {
+    flex-basis: 100%;
+  }
+  .header .container .routesCont ul {
+    display: block !important;
+  }
+  .header .container .routesCont ul .routeBox {
+    margin: 20px auto;
+    text-align: center;
+    width: fit-content;
+    text-align: center;
+  }
 }
-.header .hRight {
-  display: flex;
+@media screen and (max-width: 676px) {
+  .header .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .header .container .routesCont {
+    flex-basis: 100%;
+  }
+  .header .container .routesCont ul {
+    display: block !important;
+  }
 }
-.header .hRight div {
-  margin: 0px 10px;
+@media screen and (max-width: 12000px) {
+  .footer {
+    padding: 20px 0;
+  }
+  .footer .socialCont {
+    display: flex;
+    gap: 30px;
+  }
+  .footer .socialCont a {
+    color: black;
+    font-size: 20px;
+  }
 }
-.header .hRight div a {
-  text-decoration: none;
-  color: white;
-  font-size: 22px;
+@media screen and (max-width: 999px) {
+  .socialCont {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 120000px) {
+  .mainCont {
+    max-width: 1140px;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  .mainCont .container {
+    width: 940px;
+    margin: 0 auto;
+  }
 }
 
 /*# sourceMappingURL=App.css.map */
