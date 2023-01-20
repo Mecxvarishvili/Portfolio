@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
-const RouteGetter = ({href}) => {
+const RouteGetter = ({href, func}) => {
     const [ active, setActive ] = useState('')
+    const location = useLocation()
     useEffect(() => {
         if(window.location.pathname === href) {
             setActive("routeActive")
+        } else {
+            setActive("")
         }
 
-    }, [window.location.pathname])
+    }, [location.pathname])
     return (
-        /* window.location.pathname !== href  ?  */<li className={`routeBox ${active} liBottomHover`}><Link to={href}>{href.replace("/", "")}</Link></li>/*  : <></> */
+        <li onClick={() =>func("hideBar", true, "")} className={`${active} liBottomHover`}><Link to={href}>{href.replace("/", "")}</Link></li>
     );
 };
 

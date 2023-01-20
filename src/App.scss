@@ -5,24 +5,45 @@
 
 @media screen and (max-width: 120000px) {
     .mainCont {
-        max-width: 1140px;
+        max-width: 1110px;
+        padding: 0 15px;
         margin: 0 auto;
         margin-top: 30px;
-
         .container {
-            width: 940px;
+            width: 920px;
             margin: 0 auto;
+            padding: 0 15px;
 
 
         }
     }
-
 }
 
 @media screen and (max-width: 1200px) {
-
+    .mainCont {
+        max-width: 930px;
+        .container {
+            width: 770px;
+        }
+    }
 }
 
-@media screen and (max-width: 676px) {
+@media screen and (max-width: 999px) {
+    .mainCont {
+        max-width: 690px;
+        .container {
+            width: 570px;
+        }
+    }
+}
 
+@media screen and (max-width: 767px) {
+    .mainCont {
+        max-width: 510px;
+        .container {
+            max-width: 510px;
+            width: 100%;
+            padding: 0;
+        }
+    }
 }

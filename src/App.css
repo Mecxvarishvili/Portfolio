@@ -79,20 +79,20 @@
     background: transparent;
   }
   .header .container .burgerMenu.open .icon-left:before {
-    transform: rotateZ(45deg) scaleX(1.2) translate(2px, 2px);
+    transform: rotateZ(45deg) scaleX(1.2) translate(2.5px, 2px);
   }
   .header .container .burgerMenu.open .icon-left:after {
-    transform: rotateZ(-45deg) scaleX(1.2) translate(2px, -2px);
+    transform: rotateZ(-45deg) scaleX(1.2) translate(2.5px, -2px);
   }
   .header .container .burgerMenu.open .icon-right {
     transition-duration: 0.5s;
     background: transparent;
   }
   .header .container .burgerMenu.open .icon-right:before {
-    transform: rotateZ(-45deg) scaleX(1.2) translate(-2px, 2px);
+    transform: rotateZ(-45deg) scaleX(1.2) translate(-2.5px, 2px);
   }
   .header .container .burgerMenu.open .icon-right:after {
-    transform: rotateZ(45deg) scaleX(1.4) translate(-2px, -2px);
+    transform: rotateZ(45deg) scaleX(1.4) translate(-2.5px, -2px);
   }
   .header .container .routesCont ul {
     list-style: none;
@@ -107,6 +107,10 @@
     text-transform: capitalize;
     display: block;
     color: black;
+  }
+  .header .container .routesCont ul .routeActive {
+    color: black;
+    border-bottom: 1px solid black;
   }
   .header .container .routesCont ul .liBottomHover::after {
     content: "";
@@ -214,6 +218,8 @@
   }
   .footer .socialCont a {
     color: #545454;
+  }
+  .footer .socialCont a svg {
     font-size: 20px;
   }
 }
@@ -225,17 +231,59 @@
     bottom: 0px;
     right: 0px;
     width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    backdrop-filter: blur(6px) saturate(2.5);
+  }
+  .socialCont a {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+  }
+  .socialCont a svg {
+    font-size: 18px !important;
   }
 }
 @media screen and (max-width: 120000px) {
   .mainCont {
-    max-width: 1140px;
+    max-width: 1110px;
+    padding: 0 15px;
     margin: 0 auto;
     margin-top: 30px;
   }
   .mainCont .container {
-    width: 940px;
+    width: 920px;
     margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .mainCont {
+    max-width: 930px;
+  }
+  .mainCont .container {
+    width: 770px;
+  }
+}
+@media screen and (max-width: 999px) {
+  .mainCont {
+    max-width: 690px;
+  }
+  .mainCont .container {
+    width: 570px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .mainCont {
+    max-width: 510px;
+  }
+  .mainCont .container {
+    max-width: 510px;
+    width: 100%;
+    padding: 0;
   }
 }
 

@@ -6,6 +6,7 @@ import RouteGetter from './RouteGetter';
 const Header = (props) => {
     const [ bar, setBar ] = useState("hideBar")
     const [ menu, setMenu ] = useState("")
+
     const routesCont = () => {
         if(bar == "visibleBar") {
             menuFunc("hideBar", true, "")
@@ -19,20 +20,21 @@ const Header = (props) => {
         props.setVisible(visible)
         setMenu(menu)
     } 
+
     return (
         <div className="header" >
             <div className="container" >
-                <Link className="logo" to={HOME_PAGE}>logo</Link>
-                <div onClick={() => routesCont()} className={"burgerMenu " + menu} data-menu="12">    
-                    <div class="icon-left"></div>
-                    <div class="icon-right"></div>
+                <Link className="logo" onClick={() => menuFunc("hideBar", true, "")} to={HOME_PAGE}>logo</Link>
+                <div onClick={() => {routesCont()}} className={"burgerMenu " + menu}>    
+                    <div className="icon-left"></div>
+                    <div className="icon-right"></div>
                 </div>
                 <div className={"routesCont " + bar} >
                     <ul>
-                        <RouteGetter href={ABOUT_PAGE} />
-                        <RouteGetter href={PROJECTS_PAGE} />
-                        <RouteGetter href={RESUME_PAGE} />
-                        <RouteGetter href={CONTACT_PAGE} />
+                        <RouteGetter func={menuFunc} href={ABOUT_PAGE} />
+                        <RouteGetter func={menuFunc} href={PROJECTS_PAGE} />
+                        <RouteGetter func={menuFunc} href={RESUME_PAGE} />
+                        <RouteGetter func={menuFunc} href={CONTACT_PAGE} />
                         <li>daynight</li>
                     </ul>
                 </div>

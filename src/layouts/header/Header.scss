@@ -81,11 +81,11 @@
                     background: transparent;
                     
                     &:before{
-                      transform: rotateZ(45deg)  scaleX(1.2) translate(2px, 2px);
+                      transform: rotateZ(45deg)  scaleX(1.2) translate(2.5px, 2px);
                     }
               
                     &:after{
-                      transform: rotateZ(-45deg) scaleX(1.2) translate(2px, -2px);
+                      transform: rotateZ(-45deg) scaleX(1.2) translate(2.5px, -2px);
                     }
                   }
                   
@@ -94,11 +94,11 @@
                     background: transparent;  
                     
                     &:before{
-                      transform: rotateZ(-45deg) scaleX(1.2) translate(-2px, 2px);
+                      transform: rotateZ(-45deg) scaleX(1.2) translate(-2.5px, 2px);
                     }
               
                     &:after{
-                      transform: rotateZ(45deg) scaleX(1.4) translate(-2px, -2px);
+                      transform: rotateZ(45deg) scaleX(1.4) translate(-2.5px, -2px);
                     }
                   }
                 }
@@ -119,6 +119,10 @@
                         text-transform: capitalize;
                         display: block;
                         color: black;
+                    }
+                    .routeActive {
+                        color: black;
+                        border-bottom: 1px solid black;
                     }
 
                     .liBottomHover::after {
