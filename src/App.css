@@ -7,16 +7,92 @@
 }
 @media screen and (max-width: 120000px) {
   .header {
-    padding: 50px 0;
+    padding: 20px 0;
   }
   .header .container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 1140px;
     margin: 0 auto;
   }
   .header .container .burgerMenu {
     display: none;
+    width: 26px;
+    height: 26px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    position: relative;
+  }
+  .header .container .burgerMenu .icon-left {
+    left: 0;
+    position: absolute;
+    height: 3px;
+    width: 13px;
+    background-color: #212121;
+  }
+  .header .container .burgerMenu .icon-left:before {
+    transition-duration: 0.5s;
+    position: absolute;
+    width: 13px;
+    height: 3px;
+    background-color: #212121;
+    content: "";
+    top: -9px;
+  }
+  .header .container .burgerMenu .icon-left:after {
+    transition-duration: 0.5s;
+    position: absolute;
+    width: 13px;
+    height: 3px;
+    background-color: #212121;
+    content: "";
+    top: 9px;
+  }
+  .header .container .burgerMenu .icon-right {
+    position: absolute;
+    height: 3px;
+    width: 13px;
+    background-color: #212121;
+    right: 0;
+  }
+  .header .container .burgerMenu .icon-right:before {
+    transition-duration: 0.5s;
+    position: absolute;
+    width: 13px;
+    height: 3px;
+    background-color: #212121;
+    content: "";
+    top: -9px;
+  }
+  .header .container .burgerMenu .icon-right:after {
+    transition-duration: 0.5s;
+    position: absolute;
+    width: 13px;
+    height: 3px;
+    background-color: #212121;
+    content: "";
+    top: 9px;
+  }
+  .header .container .burgerMenu.open .icon-left {
+    transition-duration: 0.5s;
+    background: transparent;
+  }
+  .header .container .burgerMenu.open .icon-left:before {
+    transform: rotateZ(45deg) scaleX(1.2) translate(2px, 2px);
+  }
+  .header .container .burgerMenu.open .icon-left:after {
+    transform: rotateZ(-45deg) scaleX(1.2) translate(2px, -2px);
+  }
+  .header .container .burgerMenu.open .icon-right {
+    transition-duration: 0.5s;
+    background: transparent;
+  }
+  .header .container .burgerMenu.open .icon-right:before {
+    transform: rotateZ(-45deg) scaleX(1.2) translate(-2px, 2px);
+  }
+  .header .container .burgerMenu.open .icon-right:after {
+    transform: rotateZ(45deg) scaleX(1.4) translate(-2px, -2px);
   }
   .header .container .routesCont ul {
     list-style: none;
@@ -30,6 +106,7 @@
     cursor: pointer;
     text-transform: capitalize;
     display: block;
+    color: black;
   }
   .header .container .routesCont ul .liBottomHover::after {
     content: "";
@@ -65,7 +142,9 @@
     z-index: 999;
   }
   .header .container .burgerMenu {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 999;
   }
   .header .container .visibleBar {
@@ -79,21 +158,21 @@
     width: 100%;
     height: 100%;
     background-color: red;
+    padding-top: 70px;
   }
   .header .container .routesCont ul {
-    display: block !important;
     width: 720px;
     margin: 0 auto;
-    /* .routeBox {
-        margin: 20px auto;
-        text-align: center;
-        width: fit-content;
-        text-align: center;
-    } */
+    display: block;
+    width: fit-content;
+    font-weight: 500;
   }
   .header .container .routesCont ul li {
+    width: fit-content;
     margin: 3rem auto;
-    text-align: center;
+  }
+  .header .container .routesCont ul li a {
+    padding: 8px 15px;
   }
   .header .container .hideBar {
     visibility: hidden;
@@ -101,6 +180,9 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .header {
+    margin: 0 30px;
+  }
   .header .container {
     display: flex;
     flex-wrap: wrap;
@@ -109,9 +191,17 @@
   }
   .header .container .routesCont {
     flex-basis: 100%;
+    padding-top: 20px;
   }
   .header .container .routesCont ul {
     display: block !important;
+    max-width: 540px;
+    width: 100%;
+    font-size: 23px;
+    font-weight: bold;
+  }
+  .header .container .routesCont ul li a {
+    text-transform: uppercase;
   }
 }
 @media screen and (max-width: 12000px) {

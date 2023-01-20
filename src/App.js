@@ -8,12 +8,15 @@ import Footer from './layouts/footer/Footer';
 import AboutPage from './pages/about/AboutPage';
 import ContactPage from './pages/contact/ContactPage';
 import ResumePage from './pages/resume/ResumePage';
+import { useState } from 'react';
 
 function App() {
+  const [ isVisible, setVisible ] = useState(true)
   return (
       <Router>
-        <Header />
+        <Header setVisible={setVisible} />
           <div className='mainCont'>
+            {isVisible ? 
             <div className="container">
               <Routes>
               <Route exact path={HOME_PAGE} element={<Main/>} />
@@ -24,6 +27,7 @@ function App() {
               </Routes>
                <Footer />
             </div>
+             : <></>}
           </div>
       </Router>
   );
