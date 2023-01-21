@@ -1,0 +1,70 @@
+
+
+@media screen and (max-width: 120000px) {
+    .projectPage {
+        .projectsCont {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            .projectCard {
+                flex-basis: 300px;
+                flex-grow: 1;
+                background-color: black;
+                position: relative;
+                img {
+                    width: 100%
+                }
+
+                .hoverBox {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    cursor: pointer;
+
+                    .title {
+                        font-size: 30px;
+                        text-align: center;
+                        
+                    }
+                }
+
+                .hoverBox:hover {
+                    opacity: 1;
+                    transition: 1ms;
+                }
+    
+            }
+            .singleProject {
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.215);
+                position: fixed;
+                left: 0;
+                top: 0;
+                z-index: 9999;
+
+                .singleCont {
+                    width: 500px;
+                    height:100%;
+                    background-color:white;
+                    position: fixed;
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 999px) {
+
+}
+
+@media screen and (max-width: 767px) {
+
+}
