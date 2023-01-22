@@ -30,10 +30,10 @@ const ProjectsPage = () => {
             <div className="projectsCont" >
                 {projectData.map((el, i) => {
                     return (
-                       <>
-                        <ProjectCart key={i} data={el} setSingleProject={setSingleProject} />
-                        {singleProject === el.name && <SingleProject key={i} data={el} />}
-                        </>
+                       <div >
+                        <ProjectCart key={el.name} data={el} setSingleProject={setSingleProject} />
+                        {singleProject === el.name && <SingleProject key={i} data={el} setSingleProject={setSingleProject} />}
+                        </div>
                     )
                 })}
             </div>

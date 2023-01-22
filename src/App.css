@@ -288,11 +288,19 @@
     z-index: 9999;
   }
   .projectPage .projectsCont .singleProject .singleCont {
-    width: 500px;
+    width: 480px;
     height: 100%;
     background-color: white;
     position: fixed;
     right: 0;
+    overflow-x: overlay;
+    padding: 30px 30px 30px 30px;
+  }
+  .projectPage .projectsCont .singleProject .singleCont img {
+    width: 100%;
+  }
+  .projectPage .projectsCont .singleProject .singleCont .box {
+    margin: 20px 0;
   }
 }
 @media screen and (max-width: 120000px) {
