@@ -8,9 +8,9 @@ const ProjectsPage = () => {
     const project = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
     var projectData = [
     {
-        name: "amazon clone",
+        name: "Amazon Clone",
         describe: "string",
-        tech: ["React", "Redux", "Sass", ""],
+        tech: ["React", "Redux", "Sass"],
         img: "https://files.fm/thumb_show.php?i=bx6u2f6fc",
         url: "https://amazonclonevm.netlify.app/",
         github: "https://github.com/Mecxvarishvili/Amazon-Clone"
@@ -26,13 +26,13 @@ const ProjectsPage = () => {
 ];
     return (
         <div className="projectPage">
-            <div>Projects</div>
+            <div className="mainTitle">Projects</div>
             <div className="projectsCont" >
                 {projectData.map((el, i) => {
                     return (
-                       <div >
-                        <ProjectCart key={el.name} data={el} setSingleProject={setSingleProject} />
-                        {singleProject === el.name && <SingleProject key={i} data={el} setSingleProject={setSingleProject} />}
+                       <div className="project" key={el.name} >
+                        <ProjectCart  data={el} setSingleProject={setSingleProject} />
+                        {singleProject === el.name && <SingleProject  data={el} setSingleProject={setSingleProject} />}
                         </div>
                     )
                 })}
