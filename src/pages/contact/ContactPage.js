@@ -2,13 +2,16 @@ import React from 'react';
 
 const ContactPage = () => {
     return (
-        <div>
+        <div className="contactPage" >
             <div className='mainTitle' >contact</div>
-            <form method="POST" action="https://formspree.io/f/xwkjpqok" >
-                <input id="name" name="name" placeholder="Name" required />
-                <input id="email" name="email" placeholder="Email" type="email" required />
-                <textarea id="message" name="message" placeholder="Message" required />
-                <button type="submit" >Send</button>
+            <div className="desc" >You can contact me on this gmail<span> vmecxvarishvili@gmail.com</span></div>
+            <form className="contactForm" method="POST" action="https://formspree.io/f/xwkjpqok" >
+                <div className="cont" >
+                    <input className="samething" id="name" name="name" placeholder="Name" required />
+                    <input className="samething" id="email" name="email" placeholder="Email" type="email" required />
+                    <textarea className="samething" id="message" name="message" placeholder="Message" required />
+                </div>
+                <button type="submit" >Send Message</button>
             </form>
         </div>
     );
