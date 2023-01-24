@@ -442,6 +442,30 @@
     width: 100%;
   }
 }
+.resumeCont .resumeAbout {
+  margin-bottom: 40px;
+  font-size: 15px;
+}
+.resumeCont .resumeAbout a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  margin: 0 3px;
+}
+.resumeCont .resumeAbout a:hover {
+  text-decoration: underline;
+  width: fit-content;
+}
+.resumeCont .resume-img {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+}
+.resumeCont .resume-img img {
+  width: 100%;
+  height: 100%;
+}
+
 @media screen and (max-width: 120000px) {
   .mainCont {
     max-width: 1110px;
