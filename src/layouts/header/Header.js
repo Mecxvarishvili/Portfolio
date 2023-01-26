@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ABOUT_PAGE, CONTACT_PAGE, HOME_PAGE, PROJECTS_PAGE, RESUME_PAGE } from '../../components/routes';
 import RouteGetter from './RouteGetter';
+import logo from "../../img/logo.png"
 
 const Header = (props) => {
     const [ bar, setBar ] = useState("hideBar")
@@ -24,7 +25,9 @@ const Header = (props) => {
     return (
         <div className="header" >
             <div className="container" >
-                <Link className="logo" onClick={() => menuFunc("hideBar", true, "")} to={HOME_PAGE}>logo</Link>
+                <Link className="logo" onClick={() => menuFunc("hideBar", true, "")} to={HOME_PAGE}>
+                    <img src={logo} />
+                </Link>
                 <div onClick={() => {routesCont()}} className={"burgerMenu " + menu}>    
                     <div className="icon-left"></div>
                     <div className="icon-right"></div>

@@ -1,12 +1,25 @@
 @media screen and (max-width: 120000px) {
     .homePage {
         
-            .name {
-                font-size: 60px;
-                font-weight: 800;
-                text-transform: capitalize;
-                color: white;
+        .name {
+            font-size: 60px;
+            font-weight: 800;
+            text-transform: capitalize;
+            color: white;
+        }
+
+        .dit1 {
+            margin-top: 10px;
+        }
+        
+        .routediv {
+            margin-top: 10px;
+            a {
+                text-decoration: none;
+                color: #08fdd8;
+                margin: 0 3px;
             }
+        }
     }
 
 }
@@ -15,10 +28,18 @@
 
 }
 
-@media screen and (max-width: 510px) {
+@media screen and (max-width: 590px) {
     .homePage {
         .name {
-            font-size: 42px;
+            font-size: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .homePage {
+        .name {
+            font-size: 40px;
         }
     }
 }

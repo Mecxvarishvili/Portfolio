@@ -1,6 +1,7 @@
 
 @media screen and (max-width: 12000px) {
     .footer {
+        margin-top: 60px;
         padding: 20px 0;
 
         .socialCont {
@@ -8,9 +9,9 @@
             gap: 30px;
 
             a {
-                color: #545454;
+                color: #8d8d8d;
                 svg {
-                    font-size: 20px;
+                    font-size: 22px;
                 }
             }
         }

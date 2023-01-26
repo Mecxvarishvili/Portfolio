@@ -5,10 +5,26 @@
     text-transform: capitalize;
     color: white;
   }
+  .homePage .dit1 {
+    margin-top: 10px;
+  }
+  .homePage .routediv {
+    margin-top: 10px;
+  }
+  .homePage .routediv a {
+    text-decoration: none;
+    color: #08fdd8;
+    margin: 0 3px;
+  }
 }
-@media screen and (max-width: 510px) {
+@media screen and (max-width: 590px) {
   .homePage .name {
-    font-size: 42px;
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .homePage .name {
+    font-size: 40px;
   }
 }
 @media screen and (max-width: 120000px) {
@@ -107,10 +123,7 @@
     margin: 0;
   }
   .header .container .routesCont ul .routeActive {
-    border-bottom: 1px solid white;
-  }
-  .header .container .routesCont ul .routeActive a {
-    color: white;
+    border-bottom: 1px solid #08fdd8;
   }
   .header .container .routesCont ul a {
     text-decoration: none;
@@ -199,7 +212,7 @@
 }
 @media screen and (max-width: 767px) {
   .header {
-    margin: 0 30px;
+    margin: 0 15px;
   }
   .header .container {
     display: flex;
@@ -224,6 +237,7 @@
 }
 @media screen and (max-width: 12000px) {
   .footer {
+    margin-top: 60px;
     padding: 20px 0;
   }
   .footer .socialCont {
@@ -231,10 +245,10 @@
     gap: 30px;
   }
   .footer .socialCont a {
-    color: #545454;
+    color: #8d8d8d;
   }
   .footer .socialCont a svg {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 @media screen and (max-width: 999px) {
@@ -493,6 +507,7 @@
   body {
     background-color: #1d1d1d;
     color: #8d8d8d;
+    font-family: sans-serif;
   }
 
   .mainCont {
