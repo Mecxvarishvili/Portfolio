@@ -12,24 +12,25 @@ import { useState } from 'react';
 
 function App() {
   const [ isVisible, setVisible ] = useState(true)
+  
   return (
-      <Router>
-        <Header setVisible={setVisible} />
-          <div className='mainCont'>
-            {isVisible ? 
-            <div className="container">
-              <Routes>
+    <Router>
+      <Header setVisible={setVisible} />
+        <div className='mainCont'>
+          {isVisible ? 
+          <div className="container">
+            <Routes>
               <Route exact path={HOME_PAGE} element={<Main/>} />
               <Route path={ABOUT_PAGE} element={<AboutPage />} />
               <Route path={PROJECTS_PAGE} element={<ProjectsPage/>} />
               <Route path={RESUME_PAGE} element={<ResumePage />} />
               <Route path={CONTACT_PAGE} element={<ContactPage />} />
-              </Routes>
-               <Footer />
-            </div>
-             : <></>}
+            </Routes>
+             <Footer />
           </div>
-      </Router>
+           : <></>}
+        </div>
+    </Router>
   );
 }
 

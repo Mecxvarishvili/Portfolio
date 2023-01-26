@@ -13,6 +13,7 @@ const ResumePage = () => {
                 or
                 <a href="https://drive.google.com/file/d/1jqOm65ozBVpYpvwUlCNuWvCXVk5sxO99/view" target="_blank" rel="noreferrer">download</a>
                 the resume
+                
             </div>
             <div className="resume-img">
                 <img src={img} alt="resume"/>

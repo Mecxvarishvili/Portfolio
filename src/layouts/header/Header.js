@@ -8,7 +8,7 @@ const Header = (props) => {
     const [ menu, setMenu ] = useState("")
 
     const routesCont = () => {
-        if(bar == "visibleBar") {
+        if(bar === "visibleBar") {
             menuFunc("hideBar", true, "")
         } else {
             menuFunc("visibleBar", false, "open")
@@ -35,7 +35,6 @@ const Header = (props) => {
                         <RouteGetter func={menuFunc} href={PROJECTS_PAGE} />
                         <RouteGetter func={menuFunc} href={RESUME_PAGE} />
                         <RouteGetter func={menuFunc} href={CONTACT_PAGE} />
-                        <li>daynight</li>
                     </ul>
                 </div>
             </div>

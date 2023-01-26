@@ -4,7 +4,7 @@ const ContactPage = () => {
     return (
         <div className="contactPage" >
             <div className='mainTitle' >contact</div>
-            <div className="desc" >You can contact me on this gmail<span> vmecxvarishvili@gmail.com</span></div>
+            <div className="desc" >You can reach me at<span> vmecxvarishvili@gmail.com</span></div>
             <form className="contactForm" method="POST" action="https://formspree.io/f/xwkjpqok" >
                 <div className="cont" >
                     <input className="samething" id="name" name="name" placeholder="Name" required />
