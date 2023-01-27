@@ -1,0 +1,32 @@
+@media screen and (max-width: 120000px) {
+    .aboutPage {
+        .skillCont {
+            margin-top: 20px;
+            .div1 {
+
+            }
+            .skills {
+                list-style-type: none;
+                padding: 0;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+                width: 300px;
+                margin-top: 10px;
+                li {
+                    padding-left: 20px;
+                    flex-basis: 100px;
+                    flex-grow: 1;
+                    position: relative;
+                }
+                li::before {
+                    content: "▹";
+                    position: absolute;
+                    left: 0;
+                    color: #08fdd8;
+
+                }
+            }
+        }
+    }
+}

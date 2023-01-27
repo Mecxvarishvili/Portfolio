@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @media screen and (max-width: 120000px) {
   .homePage .name {
     font-size: 60px;
@@ -503,6 +504,32 @@
   height: 100%;
 }
 
+@media screen and (max-width: 120000px) {
+  .aboutPage .skillCont {
+    margin-top: 20px;
+  }
+  .aboutPage .skillCont .skills {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 300px;
+    margin-top: 10px;
+  }
+  .aboutPage .skillCont .skills li {
+    padding-left: 20px;
+    flex-basis: 100px;
+    flex-grow: 1;
+    position: relative;
+  }
+  .aboutPage .skillCont .skills li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #08fdd8;
+  }
+}
 @media screen and (max-width: 120000px) {
   body {
     background-color: #1d1d1d;
