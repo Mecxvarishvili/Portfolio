@@ -8,8 +8,8 @@ const Main = () => {
             <div className="name" >i'm vazha metskhvarishvili</div>
             <div className="dit1" >Junior Front-end Developer / React.js</div>
             <div className='routediv'>
-                Working with my hands without ChatGPT
-                <Link to={CONTACT_PAGE}>Contact</Link>&nbsp;
+                Working with my hands without ChatGPT 
+                <Link to={CONTACT_PAGE}>Contact</Link>
                 <Link to={ABOUT_PAGE} >About</Link>
                 <Link to={PROJECTS_PAGE} >Projects</Link>
                 <Link to={RESUME_PAGE}>Resume</Link>
