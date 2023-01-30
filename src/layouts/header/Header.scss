@@ -225,6 +225,7 @@
             .hideBar {
                 visibility: hidden;
                 opacity: 0;
+                transition-duration: 1s;
             }
         }
     }

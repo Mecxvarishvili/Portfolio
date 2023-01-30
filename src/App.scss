@@ -19,6 +19,14 @@ $back2: #0a192f;
         color: #8d8d8d;
         font-family: sans-serif;
     }
+    .transparent-website {
+        transition-duration: 3s;
+    }
+
+    .activetr {
+        visibility: none;
+        opacity: 0;
+    }
     .mainCont {
         max-width: 1110px;
         padding: 0 15px;
