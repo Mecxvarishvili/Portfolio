@@ -5,6 +5,7 @@
     font-weight: 800;
     text-transform: capitalize;
     color: white;
+    margin-top: 100px;
   }
   .homePage .dit1 {
     margin-top: 10px;
@@ -21,6 +22,12 @@
   }
   .homePage .routediv a:hover {
     background: red;
+  }
+}
+@media screen and (max-width: 999px) {
+  .homePage .name {
+    margin-top: 70px;
+    font-size: 55px;
   }
 }
 @media screen and (max-width: 590px) {
@@ -546,12 +553,15 @@
   }
 
   .transparent-website {
-    transition-duration: 3s;
+    /* transition-duration: 0.5s;
+    visibility: visible;
+    opacity: 1; */
   }
 
   .activetr {
-    visibility: none;
+    visibility: hidden;
     opacity: 0;
+    transition-duration: 0.5s;
   }
 
   .mainCont {

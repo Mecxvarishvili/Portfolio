@@ -20,12 +20,15 @@ $back2: #0a192f;
         font-family: sans-serif;
     }
     .transparent-website {
-        transition-duration: 3s;
+        /* transition-duration: 0.5s;
+        visibility: visible;
+        opacity: 1; */
     }
 
     .activetr {
-        visibility: none;
+        visibility:hidden;
         opacity: 0;
+        transition-duration: 0.5s;
     }
     .mainCont {
         max-width: 1110px;

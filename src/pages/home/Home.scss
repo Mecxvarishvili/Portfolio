@@ -6,6 +6,7 @@
             font-weight: 800;
             text-transform: capitalize;
             color: white;
+            margin-top: 100px;
         }
 
         .dit1 {
@@ -31,8 +32,13 @@
 
 }
 
-@media screen and (max-width: 1200px) {
-
+@media screen and (max-width: 999px) {
+    .homePage {
+        .name {
+            margin-top: 70px;
+            font-size: 55px;
+        }
+    }
 }
 
 @media screen and (max-width: 590px) {

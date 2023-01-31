@@ -13,6 +13,7 @@ import { useEffect, useState } from 'react';
 function App() {
   const [ isVisible, setVisible ] = useState(true)
   const [ tr, setTr ] = useState("activetr")
+  const [ transition, setTransition ] = useState(false)
 
   const transparent = () => {
     setTr("activetr")
@@ -21,14 +22,20 @@ function App() {
     }, 500)
   }
 
+  const transitionHandler = () => {
+    setTransition((current) => !current)
+  }
+
   useEffect(() => {
     transparent()
-  }, [])
+    console.log("s")
+  }, [transition])
   
   return (
     <div className={"transparent-website " + tr}>
       <Router>
         <Header setVisible={setVisible} />
+        <button onClick={() => transitionHandler()}>sdf</button>
           <div className='mainCont'>
             {isVisible ? 
             <div className="container">
