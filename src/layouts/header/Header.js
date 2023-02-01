@@ -26,7 +26,7 @@ const Header = (props) => {
         <div className="header" >
             <div className="container" >
                 <Link className="logo" onClick={() => menuFunc("hideBar", true, "")} to={HOME_PAGE}>
-                    <img src={logo} />
+                    <img src={logo} alt="logo" />
                 </Link>
                 <div onClick={() => {routesCont()}} className={"burgerMenu " + menu}>    
                     <div className="icon-left"></div>
@@ -34,10 +34,10 @@ const Header = (props) => {
                 </div>
                 <div className={"routesCont " + bar} >
                     <ul>
-                        <RouteGetter func={menuFunc} href={ABOUT_PAGE} />
-                        <RouteGetter func={menuFunc} href={PROJECTS_PAGE} />
-                        <RouteGetter func={menuFunc} href={RESUME_PAGE} />
-                        <RouteGetter func={menuFunc} href={CONTACT_PAGE} />
+                        <RouteGetter transition={props.setTransition} func={menuFunc} href={ABOUT_PAGE} />
+                        <RouteGetter transition={props.setTransition} func={menuFunc} href={PROJECTS_PAGE} />
+                        <RouteGetter transition={props.setTransition} func={menuFunc} href={RESUME_PAGE} />
+                        <RouteGetter transition={props.setTransition} func={menuFunc} href={CONTACT_PAGE} />
                     </ul>
                 </div>
             </div>

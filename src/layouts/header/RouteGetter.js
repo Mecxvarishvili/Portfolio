@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-const RouteGetter = ({href, func}) => {
+const RouteGetter = ({href, func, transition}) => {
     const [ active, setActive ] = useState('')
     const location = useLocation()
     useEffect(() => {
@@ -13,7 +13,7 @@ const RouteGetter = ({href, func}) => {
 
     }, [location.pathname])
     return (
-        <li onClick={() =>func("hideBar", true, "")} className={`${active} liBottomHover`}><Link to={href}>{href.replace("/", "")}</Link></li>
+        <li onClick={() => {func("hideBar", true, ""); transition()}} className={`${active} liBottomHover`}><Link to={href}>{href.replace("/", "")}</Link></li>
     );
 };
 
