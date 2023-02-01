@@ -1,9 +1,10 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Header from './layouts/header/Header';
 import Footer from './layouts/footer/Footer';
 import { useEffect, useState } from 'react';
 import AnimatedRoutes from './components/AnimatedRoutes';
+import { AnimatePresence, motion } from 'framer-motion';
 
 function App() {
   const [ isVisible, setVisible ] = useState(true)
@@ -29,19 +30,21 @@ function App() {
   }, [transition])
   
   return (
-    <div className={"transparent-website " + tr}>
-      <Router>
-        <Header setTransition={transitionHandler} setVisible={setVisible} />
-          <div className='mainCont'>
-            {isVisible ? 
-            <div className="container">
-              <AnimatedRoutes setTransition={setTransition}/>
-               <Footer />
+    <AnimatePresence>
+      <div className={"transparent-website " + tr}>
+        <Router>
+          <Header /* setTransition={transitionHandler} */ setVisible={setVisible} />
+            <div className='mainCont'>
+              {isVisible ? 
+              <div className="container">
+                <AnimatedRoutes setTransition={transitionHandler}/>
+                 <Footer />
+              </div>
+               : <></>}
             </div>
-             : <></>}
-          </div>
-      </Router>
-    </div>
+        </Router>
+      </div>
+    </AnimatePresence>
   );
 }
 

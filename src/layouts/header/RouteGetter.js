@@ -13,7 +13,7 @@ const RouteGetter = ({href, func, transition}) => {
 
     }, [location.pathname])
     return (
-        <li onClick={() => {func("hideBar", true, ""); transition()}} className={`${active} liBottomHover`}><Link to={href}>{href.replace("/", "")}</Link></li>
+        <li onClick={() => {func("hideBar", true, "")/* ; transition() */}} className={`${active} liBottomHover`}><Link to={href}>{href.replace("/", "")}</Link></li>
     );
 };
 

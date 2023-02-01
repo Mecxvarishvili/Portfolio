@@ -7,12 +7,13 @@ import AboutPage from '../pages/about/AboutPage';
 import ContactPage from '../pages/contact/ContactPage';
 import ResumePage from '../pages/resume/ResumePage';
 
-const AnimatedRoutes = ({}) => {
+const AnimatedRoutes = ({setTransition}) => {
     const location = useLocation()
 
-    useEffect(() => {
+    /* useEffect(() => {
+        setTransition()
 
-    }, [location.pathname])
+    }, [location.pathname]) */
 
     return (
         <Routes location={location} key={location.pathname} >

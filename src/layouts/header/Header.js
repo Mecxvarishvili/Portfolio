@@ -34,10 +34,10 @@ const Header = (props) => {
                 </div>
                 <div className={"routesCont " + bar} >
                     <ul>
-                        <RouteGetter transition={props.setTransition} func={menuFunc} href={ABOUT_PAGE} />
-                        <RouteGetter transition={props.setTransition} func={menuFunc} href={PROJECTS_PAGE} />
-                        <RouteGetter transition={props.setTransition} func={menuFunc} href={RESUME_PAGE} />
-                        <RouteGetter transition={props.setTransition} func={menuFunc} href={CONTACT_PAGE} />
+                        <RouteGetter /* transition={props.setTransition} */ func={menuFunc} href={ABOUT_PAGE} />
+                        <RouteGetter /* transition={props.setTransition} */ func={menuFunc} href={PROJECTS_PAGE} />
+                        <RouteGetter /* transition={props.setTransition} */ func={menuFunc} href={RESUME_PAGE} />
+                        <RouteGetter /* transition={props.setTransition} */ func={menuFunc} href={CONTACT_PAGE} />
                     </ul>
                 </div>
             </div>
