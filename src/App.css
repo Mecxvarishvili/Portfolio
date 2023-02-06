@@ -296,6 +296,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    margin-top: 80px;
   }
   .projectPage .projectsCont .project {
     flex-basis: 300px;
@@ -307,6 +308,8 @@
   }
   .projectPage .projectsCont .projectCard img {
     width: 100%;
+    height: 300px;
+    object-fit: cover;
   }
   .projectPage .projectsCont .projectCard .hoverBox {
     position: absolute;
@@ -383,6 +386,7 @@
   .projectPage .projectsCont .singleProject .singleCont .inSingleCont img {
     width: 100%;
     height: 300px;
+    object-fit: contain;
   }
   .projectPage .projectsCont .singleProject .singleCont .inSingleCont .box {
     margin: 25px 0;

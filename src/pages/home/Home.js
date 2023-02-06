@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import { ABOUT_PAGE, CONTACT_PAGE, PROJECTS_PAGE, RESUME_PAGE } from '../../components/routes';
-import { motion } from 'framer-motion';
 
 const Main = () => {
+
     return (
-        <motion.div className="homePage" 
+        <div className="homePage" 
         initial={{opacity: 0}}
         animate={{opacity: 1}}
         exit={{opacity: 0}}
@@ -19,7 +19,7 @@ const Main = () => {
                 <Link to={PROJECTS_PAGE} >Projects</Link>
                 <Link to={RESUME_PAGE}>Resume</Link>
             </div>
-        </motion.div>
+        </div>
     );
 };
 
