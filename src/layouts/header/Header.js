@@ -18,14 +18,18 @@ const Header = (props) => {
 
     const menuFunc = (bar, visible, menu) => {
         setBar(bar)
-        props.setVisible(visible)
+        props.setMainVisible(visible)
         setMenu(menu)
     } 
 
     return (
         <div className="header" >
             <div className="container" >
-                <Link className="logo" onClick={() => menuFunc("hideBar", true, "")} to={HOME_PAGE}>
+                <Link className="logo" 
+                    onClick={() =>{if(window.location.pathname === HOME_PAGE) 
+                    menuFunc("hideBar", true, "")}} 
+                    to={HOME_PAGE}
+                >
                     <img src={logo} alt="logo" />
                 </Link>
                 <div onClick={() => {routesCont()}} className={"burgerMenu " + menu}>    
@@ -34,10 +38,10 @@ const Header = (props) => {
                 </div>
                 <div className={"routesCont " + bar} >
                     <ul>
-                        <RouteGetter /* transition={props.setTransition} */ /* func={menuFunc} */ href={ABOUT_PAGE} />
-                        <RouteGetter /* transition={props.setTransition} */ /* func={menuFunc} */ href={PROJECTS_PAGE} />
-                        <RouteGetter /* transition={props.setTransition} */ /* func={menuFunc} */ href={RESUME_PAGE} />
-                        <RouteGetter /* transition={props.setTransition} */ /* func={menuFunc} */ href={CONTACT_PAGE} />
+                        <RouteGetter href={ABOUT_PAGE} />
+                        <RouteGetter href={PROJECTS_PAGE} />
+                        <RouteGetter href={RESUME_PAGE} />
+                        <RouteGetter href={CONTACT_PAGE} />
                     </ul>
                 </div>
             </div>

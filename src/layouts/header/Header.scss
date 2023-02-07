@@ -225,7 +225,6 @@
             .hideBar {
                 visibility: hidden;
                 opacity: 0;
-                transition-duration: 1s;
             }
         }
     }
@@ -251,7 +250,6 @@
                 flex-basis: 100%;
                 
                 padding-top: 20px;
-                // display: none;
                 ul {
                     display: block!important;
                     max-width: 540px;

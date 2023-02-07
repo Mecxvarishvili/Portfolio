@@ -222,7 +222,6 @@
   .header .container .hideBar {
     visibility: hidden;
     opacity: 0;
-    transition-duration: 1s;
   }
 }
 @media screen and (max-width: 767px) {
@@ -555,18 +554,6 @@
     background-color: #1d1d1d;
     color: #8d8d8d;
     font-family: sans-serif;
-  }
-
-  .transparent-website {
-    transition-duration: 0.5s;
-    visibility: visible;
-    opacity: 1;
-  }
-
-  .activetr {
-    visibility: hidden;
-    opacity: 0;
-    display: none;
   }
 
   .mainCont {
