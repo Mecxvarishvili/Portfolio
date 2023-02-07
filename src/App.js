@@ -40,13 +40,13 @@ function App() {
   }
   
   return (
-      <div className={"transparent-website " + tr}>
-          <Header /* setTransition={transitionHandler} */ setVisible={setVisible} />
+      /* <div className={"transparent-website " + tr}>
+          <Header /* setTransition={transitionHandler} * setVisible={setVisible} />
             <div className='mainCont'>
               {isVisible ? 
               <div className="container">
                 <AnimatePresence>
-                <Routes location={location} >
+                <Routes location={location} key={location.pathname} >
                   <Route index exact path={HOME_PAGE} loader={asd()} element={<AnimatedRoutes children={<Main/>} />} />
                   <Route path={ABOUT_PAGE} element={<AnimatedRoutes children={<AboutPage />} />} />
                   <Route path={PROJECTS_PAGE} element={<AnimatedRoutes children={<ProjectsPage/>} />} />
@@ -58,7 +58,16 @@ function App() {
               </div>
                : <></>}
             </div>
-      </div>
+      </div> */
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname} >
+          <Route index exact path={HOME_PAGE} loader={asd()} element={<AnimatedRoutes children={<Main/>} />} />
+          <Route path={ABOUT_PAGE} element={<AnimatedRoutes children={<AboutPage />} />} />
+          <Route path={PROJECTS_PAGE} element={<AnimatedRoutes children={<ProjectsPage/>} />} />
+          <Route path={RESUME_PAGE} element={<AnimatedRoutes children={<ResumePage />} />} />
+          <Route path={CONTACT_PAGE} element={<AnimatedRoutes children={<ContactPage />} />} />
+        </Routes>
+      </AnimatePresence>
   );
 }
 
