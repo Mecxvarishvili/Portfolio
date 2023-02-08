@@ -1,24 +1,54 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Header from '../layouts/header/Header';
 import Footer from '../layouts/footer/Footer';
 const AnimatedRoutes = ({children}) => {
+    const [ animation, setAnimation ] = useState(true)
+    const [ animate, setAnimate ] = useState(true)
     const [ mainVisible, setMainVisible ] = useState(true)
+    const [ bar, setBar ] = useState("visibleBar")
+
+    
+    const handleBar = () => {
+        if(bar === "visibleBar") {
+            setBar("hideBar")
+        } else {
+            setBar("visibleBar")
+        }
+    }
+
+    useEffect(() => {
+        setAnimate(false)
+        setTimeout(() => {setAnimate(true);  handleBar(); setMainVisible((c) => !c)}, 900)
+        console.log("action")
+    }, [animation])
+
+    const variants = {
+        start: {
+            opacity: 0,
+            transition: { delay: 0.1 }
+        },
+        stop: {
+            opacity: 1,
+            transition: { delay: 0.1 }
+
+        },
+    }
     
     return (
         <motion.div
+        variants={variants}
         initial={{opacity: 0}}
-        animate={{opacity: 1}}
+        animate={animate ? "stop" : "start"}
         exit={{opacity: 0}}
-        transition={{ delay: 0.2 }}
         >
-            <Header setMainVisible={setMainVisible} />
+            <Header viewBar={bar} setBar={setBar} setAnimation={setAnimation} setMainVisible={setMainVisible} />
             <div className="mainCont">
-                {mainVisible ?
+                {mainVisible &&
                 <div className="container">
                     {children}
                     <Footer/>
-                </div> : <></>
+                </div>
                 }
             </div>
         </motion.div>

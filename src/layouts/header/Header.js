@@ -1,42 +1,31 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ABOUT_PAGE, CONTACT_PAGE, HOME_PAGE, PROJECTS_PAGE, RESUME_PAGE } from '../../components/routes';
 import RouteGetter from './RouteGetter';
 import logo from "../../img/logo.png"
 
-const Header = (props) => {
-    const [ bar, setBar ] = useState("hideBar")
+const Header = ({viewBar, setAnimation}) => {
     const [ menu, setMenu ] = useState("")
-
-    const routesCont = () => {
-        if(bar === "visibleBar") {
-            menuFunc("hideBar", true, "")
+    
+    useEffect(() => {
+        if(viewBar === "visibleBar") {
+            setMenu("open")
         } else {
-            menuFunc("visibleBar", false, "open")
+            setMenu("")
         }
-    }
-
-    const menuFunc = (bar, visible, menu) => {
-        setBar(bar)
-        props.setMainVisible(visible)
-        setMenu(menu)
-    } 
+    }, [viewBar])
 
     return (
         <div className="header" >
             <div className="container" >
-                <Link className="logo" 
-                    onClick={() =>{if(window.location.pathname === HOME_PAGE) 
-                    menuFunc("hideBar", true, "")}} 
-                    to={HOME_PAGE}
-                >
+                <Link className="logo" to={HOME_PAGE}>
                     <img src={logo} alt="logo" />
                 </Link>
-                <div onClick={() => {routesCont()}} className={"burgerMenu " + menu}>    
+                <div onClick={() => setAnimation((current) => !current)} className={"burgerMenu " + menu}>    
                     <div className="icon-left"></div>
                     <div className="icon-right"></div>
                 </div>
-                <div className={"routesCont " + bar} >
+                <div className={"routesCont " + viewBar} >
                     <ul>
                         <RouteGetter href={ABOUT_PAGE} />
                         <RouteGetter href={PROJECTS_PAGE} />
