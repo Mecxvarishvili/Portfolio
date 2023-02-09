@@ -7,6 +7,7 @@
             text-transform: capitalize;
             color: white;
             margin-top: 100px;
+            letter-spacing: normal;
         }
 
         .dit1 {
@@ -19,11 +20,9 @@
             a {
                 text-decoration: none;
                 color: #08fdd8;
-                margin: 0 3px;
-                padding: 0 12px;
             }
             a:hover {
-                background: red;
+                text-decoration: underline;
             }
         }
 

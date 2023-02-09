@@ -23,7 +23,7 @@ const AnimatedRoutes = ({children}) => {
           firstRenderRef.current = false;
         } else {
             setAnimate(false)
-            setTimeout(() => {setAnimate(true);  handleBar(); setMainVisible((c) => !c)}, 100)
+            setTimeout(() => {setAnimate(true);  handleBar(); setMainVisible((c) => !c)}, 200)
             console.log("action")
         }
         
@@ -32,11 +32,11 @@ const AnimatedRoutes = ({children}) => {
     const variants = {
         start: {
             opacity: 0,
-            transition: {delay: .1}
+            transition: {delay: .1, duration: 0.1}
         },
         stop: {
             opacity: 1,
-            transition: {delay: .1}
+            transition: {delay: .1, duration: 0.1}
 
         },
     }
@@ -47,7 +47,7 @@ const AnimatedRoutes = ({children}) => {
             initial={{opacity: 0}}
             animate={animate ? "stop" : "start"}
             exit={{opacity: 0}}
-            transition={{delay: .1}}
+            transition={{delay: .1, duration: 0.1}}
         >
             <Header viewBar={bar} setBar={setBar} setAnimation={setAnimation} setMainVisible={setMainVisible} />
             <div className="mainCont">

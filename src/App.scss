@@ -13,11 +13,18 @@ $color2: #64ffda;
 $back1: #1d1d1d;
 $back2: #0a192f;
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 @media screen and (max-width: 120000px) {
     body {
         background-color: $back1;
         color: #8d8d8d;
-        font-family: sans-serif;
+        font-family:system-ui;
+        letter-spacing: 1px;
     }
     .mainCont {
         max-width: 1110px;
@@ -27,7 +34,6 @@ $back2: #0a192f;
         .container {
             width: 920px;
             margin: 0 auto;
-            padding: 0 15px;
         
             .mainTitle {
                 font-size: 50px;
