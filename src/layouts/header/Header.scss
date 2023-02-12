@@ -9,7 +9,12 @@
             width: 1140px;
             margin: 0 auto;
             .logo {
+                width: 30px;
+                height: 30px;
                 
+                img {
+                    width: 100%;
+                }
             }
             .burgerMenu {
                 display: none;
@@ -179,12 +184,6 @@
 
             .logo {
                 z-index: 999;
-                width: 30px;
-                height: 30px;
-                
-                img {
-                    width: 100%;
-                }
             }
 
             
