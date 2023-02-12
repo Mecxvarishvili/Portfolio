@@ -2,9 +2,6 @@
     .header {
         padding: 20px 0;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-        // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-        // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         .container {
             display: flex;
             justify-content: space-between;
@@ -182,6 +179,12 @@
 
             .logo {
                 z-index: 999;
+                width: 30px;
+                height: 30px;
+                
+                img {
+                    width: 100%;
+                }
             }
 
             
