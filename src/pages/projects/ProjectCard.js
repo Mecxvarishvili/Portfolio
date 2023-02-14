@@ -1,11 +1,12 @@
 
 import React from 'react';
+import ImageLoader from '../../components/ImageLoader';
 
 const ProjectCard = ({data, setSingleProject}) => {
 
     return (
         <div className="projectCard">
-            <img src={data.img} />
+            <ImageLoader img={data.img} />
             <div className="hoverBox" onClick={() => setSingleProject(data.name)}>
                 <div className="title">{data.name}</div>
                 <div className="skillsCont">

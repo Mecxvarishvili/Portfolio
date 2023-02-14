@@ -1,10 +1,9 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const SocialNetworkIcon = ({brand, link}) => {
+const SocialNetworkIcon = ({icon, link}) => {
     return (
         <a href={link} rel="noreferrer" target="_blank" >
-            <FontAwesomeIcon icon={brand} />
+            {icon}
         </a>
     );
 }

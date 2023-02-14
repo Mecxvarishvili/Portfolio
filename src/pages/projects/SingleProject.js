@@ -1,6 +1,9 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import ImageLoader from "../../components/ImageLoader";
+import { SlGlobe } from 'react-icons/sl';
+import { FaExternalLinkAlt } from 'react-icons/fa';
+import { BsGithub, BsBoxArrowLeft } from 'react-icons/bs';
+
 
 const SingleProject = ({data, setSingleProject}) => {
     return (
@@ -8,10 +11,10 @@ const SingleProject = ({data, setSingleProject}) => {
             <div  onClick={(e) => e.stopPropagation()} className="singleCont">
                 <div className="inSingleCont" >
                     <div className="exitBox" onClick={() => setSingleProject("")} >
-                        <FontAwesomeIcon icon={faArrowLeft} />
+                        <BsBoxArrowLeft/>
                     </div>
                     <div className="singleTitle">{data.name}</div>
-                    <img src={data.img} />
+                    <ImageLoader img={data.img} />
                     <div className="box">
                         <div className="title">About</div>
                         <div className="describe" >{data.describe}</div>
@@ -26,15 +29,23 @@ const SingleProject = ({data, setSingleProject}) => {
                         </div>
                     </div>
                     <div className="box">
-                        <div className="title">website</div>
+                        <span>
+                            <SlGlobe />
+                            <div className="title">website</div>
+                        </span>
                         <a className="url" href={data.url} target="_blink" >{data.url}</a>
                     </div>
                     {data.github && 
                     <div className="box">
+                        <span>
+                        <BsGithub />
                         <div className="title">github</div>
+                        </span>
                         <a className="url" href={data.github} target="_blink" >{data.github}</a>
                     </div>}
-                    <a className="footerButton" href={data.url} target="_blink">open Project</a>
+                    <a className="footerButton" href={data.url} target="_blink">
+                        <FaExternalLinkAlt />
+                        open Project</a>
                 </div>
             </div>
         </div>

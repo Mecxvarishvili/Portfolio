@@ -9,8 +9,8 @@
             width: 1140px;
             margin: 0 auto;
             .logo {
-                width: 30px;
-                height: 30px;
+                width: 35px;
+                height: 35px;
                 
                 img {
                     width: 100%;
@@ -173,7 +173,7 @@
 
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 1024px) {
     .header {
         position: relative;
 
@@ -184,8 +184,8 @@
 
             .logo {
                 z-index: 999;
+                
             }
-
             
             .burgerMenu {
                 display: flex;
@@ -242,6 +242,14 @@
             flex-wrap: wrap;
             max-width: 540px!important;
             width: 100%;
+
+            .logo {
+                width: 30px;
+                height: 30px;
+                img {
+                    width: 100%;
+                }
+            }
 
             
             .burgerMenu {

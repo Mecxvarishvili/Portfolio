@@ -25,6 +25,70 @@ $back2: #0a192f;
         color: #8d8d8d;
         font-family:system-ui;
         letter-spacing: 1px;
+        .image-loader-cont {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            .image-loader {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: #1d1d1d;
+                display: flex;
+                justify-content: center;
+                .lds-ripple {
+                    display: inline-block;
+                    position: relative;
+                    width: 50px;
+                    height: 50px;
+                    margin-top: 100px;
+                  }
+                  .lds-ripple div {
+                    position: absolute;
+                    border: 2px solid #8d8d8d;
+                    opacity: 1;
+                    border-radius: 50%;
+                    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+                  }
+                  .lds-ripple div:nth-child(2) {
+                    animation-delay: -0.5s;
+                  }
+                  @keyframes lds-ripple {
+                    0% {
+                      top: 25px;
+                      left: 25px;
+                      width: 0;
+                      height: 0;
+                      opacity: 0;
+                    }
+                    4.9% {
+                      top: 25px;
+                      left: 25px;
+                      width: 0;
+                      height: 0;
+                      opacity: 0;
+                    }
+                    5% {
+                      top: 25px;
+                      left: 25px;
+                      width: 0;
+                      height: 0;
+                      opacity: 1;
+                    }
+                    100% {
+                      top: 0px;
+                      left: 0px;
+                      width: 50px;
+                      height: 50px;
+                      opacity: 0;
+                    }
+                  }
+                  
+            }
+
+        }
     }
     .mainCont {
         max-width: 1110px;
@@ -55,7 +119,7 @@ $back2: #0a192f;
     }
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 1025px) {
     .mainCont {
         max-width: 690px;
         .container {

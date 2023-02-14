@@ -2,6 +2,7 @@ import React from 'react';
 import img from "./Vazha-Metskhvarishvili-1.jpg"
 import { Link } from 'react-router-dom';
 import { CONTACT_PAGE } from '../../components/routes';
+import ImageLoader from '../../components/ImageLoader';
 
 const ResumePage = () => {
     return (
@@ -16,7 +17,7 @@ const ResumePage = () => {
                 
             </div>
             <div className="resume-img">
-                <img src={img} alt="resume"/>
+                <ImageLoader img={img} />
             </div>
         </div>
     );
