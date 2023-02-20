@@ -4,7 +4,9 @@ const AboutPage = () => {
     return (
         <div className="aboutPage" >
             <div className="mainTitle" >about</div>
-            <div  >I'm Vazha Junior Front-end Developer located in Georgia</div>
+            <div className='mainDescribe' >I'm Vazha, an experienced junior front-end developer based in Georgia.
+            My experience has allowed me to create dynamic, responsive, and highly functional websites and web applications.  
+            If you're looking for a web developer to bring your vision to life, I'd be thrilled to hear from you.</div>
             <div className="skillCont" >
                 <div className="div1">Here are a few technologies I’ve been working with recently:</div>
                 <ul className='skills'>

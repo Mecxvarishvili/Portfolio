@@ -7,13 +7,9 @@ const Main = () => {
     return (
         <div className="homePage">
             <div className="name" >i'm vazha metskhvarishvili</div>
-            <div className="dit1" >Junior Front-end Developer / React.js</div>
+            <div className="dit1" >Junior Front-end Developer. {/* Here, you can find information about my skills, experience, and projects. */} </div>
             <div className='routediv'>
-                Working with my hands without ChatGPT, Check other page<> </>
-                <Link to={CONTACT_PAGE}>Contact</Link>,<> </>
-                <Link to={ABOUT_PAGE} >About</Link>,<> </>
-                <Link to={PROJECTS_PAGE} >Projects</Link>,<> </>
-                <Link to={RESUME_PAGE}>Resume</Link>.
+            Feel free to explore the different pages on this website, including my <Link to={CONTACT_PAGE}>Contact</Link>, <Link to={PROJECTS_PAGE} >Projects</Link>, <Link to={RESUME_PAGE}>Resume</Link>, <Link to={ABOUT_PAGE} >About Me</Link>. Thank you for visiting, and please don't hesitate to get in touch if you have any questions!
             </div>
         </div>
     );

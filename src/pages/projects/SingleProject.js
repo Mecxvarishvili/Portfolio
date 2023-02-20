@@ -45,7 +45,8 @@ const SingleProject = ({data, setSingleProject}) => {
                     </div>}
                     <a className="footerButton" href={data.url} target="_blink">
                         <FaExternalLinkAlt />
-                        open Project</a>
+                        open Project
+                    </a>
                 </div>
             </div>
         </div>

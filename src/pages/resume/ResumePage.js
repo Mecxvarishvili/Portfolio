@@ -1,5 +1,5 @@
 import React from 'react';
-import img from "./Vazha-Metskhvarishvili-1.jpg"
+import img from "../../img/Vazha-Metskhvarishvili-1.jpg";
 import { Link } from 'react-router-dom';
 import { CONTACT_PAGE } from '../../components/routes';
 import ImageLoader from '../../components/ImageLoader';
@@ -17,7 +17,7 @@ const ResumePage = () => {
                 
             </div>
             <div className="resume-img">
-                <ImageLoader img={img} />
+                <ImageLoader img={require("../../img/Vazha-Metskhvarishvili-1.jpg")} />
             </div>
         </div>
     );
