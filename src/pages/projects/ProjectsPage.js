@@ -17,7 +17,7 @@ const ProjectsPage = () => {
         github: "https://github.com/Mecxvarishvili/Amazon-Clone"
     },
     {
-        name: "eCommerce Exercise",
+        name: "eCommerce App",
         describe: "An eCommerce website typically has several key pages, including: Category page, Single product page, Cart page. In addition to these pages, an eCommerce website should also have the following functions: Product filter, Add to cart.",
         tech: ["React", "Class Component", "Redux", "Sass",],
         img: require("../../img/swecommerce.png"),

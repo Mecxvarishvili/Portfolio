@@ -6,13 +6,6 @@
 @import "./pages/resume/ResumePage.scss";
 @import "./pages/about/AboutPage.scss";
 
-$light: white;
-$dark: black;
-$color1: #08fdd8;
-$color2: #64ffda;
-$back1: #1d1d1d;
-$back2: #0a192f;
-
 * {
     margin: 0;
     padding: 0;
@@ -21,7 +14,7 @@ $back2: #0a192f;
 
 @media screen and (max-width: 120000px) {
     body {
-        background-color: $back1;
+        background-color: #1d1d1d;
         color: #8d8d8d;
         font-family:system-ui;
         letter-spacing: 1px;

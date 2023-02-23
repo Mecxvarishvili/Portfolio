@@ -213,6 +213,7 @@
         .projectsCont {
             .projectCard {
                 .hoverBox {
+                    padding: 24px 20px;
                     opacity: 1;
                     background: linear-gradient(rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.78) 80%);
                 }
@@ -220,6 +221,13 @@
             .singleProject {
                 .singleCont {
                     width: 100%;
+                    .inSingleCont {
+                        padding: 24px 20px;
+
+                        .box-cont {
+                            margin-bottom: 60px!important;
+                        }
+                    }
                 }
             }
         }

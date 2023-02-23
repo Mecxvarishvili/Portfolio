@@ -481,11 +481,18 @@
 }
 @media screen and (max-width: 767px) {
   .projectPage .projectsCont .projectCard .hoverBox {
+    padding: 24px 20px;
     opacity: 1;
     background: linear-gradient(rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.78) 80%);
   }
   .projectPage .projectsCont .singleProject .singleCont {
     width: 100%;
+  }
+  .projectPage .projectsCont .singleProject .singleCont .inSingleCont {
+    padding: 24px 20px;
+  }
+  .projectPage .projectsCont .singleProject .singleCont .inSingleCont .box-cont {
+    margin-bottom: 60px !important;
   }
 }
 @media screen and (max-width: 120000px) {

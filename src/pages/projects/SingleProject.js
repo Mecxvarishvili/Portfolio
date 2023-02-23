@@ -15,6 +15,7 @@ const SingleProject = ({data, setSingleProject}) => {
                     </div>
                     <div className="singleTitle">{data.name}</div>
                     <ImageLoader img={data.img} />
+                    <div className="box-cont">
                     <div className="box">
                         <div className="title">About</div>
                         <div className="describe" >{data.describe}</div>
@@ -43,6 +44,7 @@ const SingleProject = ({data, setSingleProject}) => {
                         </span>
                         <a className="url" href={data.github} target="_blink" >{data.github}</a>
                     </div>}
+                    </div>
                     <a className="footerButton" href={data.url} target="_blink">
                         <FaExternalLinkAlt />
                         open Project

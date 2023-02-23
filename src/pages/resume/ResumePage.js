@@ -9,11 +9,7 @@ const ResumePage = () => {
         <div className="resumeCont" >
             <div className="mainTitle" >resume</div>
             <div className="resumeAbout" >
-                Reach out to me via my
-                <Link to={CONTACT_PAGE} >contact page.</Link>
-                or
-                <a href="https://drive.google.com/file/d/1jqOm65ozBVpYpvwUlCNuWvCXVk5sxO99/view" target="_blank" rel="noreferrer">download</a>
-                the resume
+                Reach out to me via my <Link to={CONTACT_PAGE} >contact page</Link> or <a href="https://drive.google.com/file/d/1jqOm65ozBVpYpvwUlCNuWvCXVk5sxO99/view" target="_blank" rel="noreferrer">download</a> the resume
                 
             </div>
             <div className="resume-img">
