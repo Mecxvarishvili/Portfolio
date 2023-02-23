@@ -24,7 +24,6 @@ const AnimatedRoutes = ({children}) => {
         } else {
             setAnimate(false)
             setTimeout(() => {setAnimate(true);  handleBar(); setMainVisible((c) => !c)}, 200)
-            console.log("action")
         }
         
     }, [animation])
