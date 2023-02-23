@@ -479,11 +479,15 @@
     text-decoration: underline;
   }
 }
+@media screen and (max-width: 1024px) {
+  .projectPage .projectsCont .projectCard .hoverBox {
+    opacity: 1;
+    background: linear-gradient(rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.78) 80%);
+  }
+}
 @media screen and (max-width: 767px) {
   .projectPage .projectsCont .projectCard .hoverBox {
     padding: 24px 20px;
-    opacity: 1;
-    background: linear-gradient(rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.78) 80%);
   }
   .projectPage .projectsCont .singleProject .singleCont {
     width: 100%;
